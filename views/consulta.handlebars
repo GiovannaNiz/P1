@@ -1,0 +1,28 @@
+<div class="container">
+        <h1>Tela de Consulta</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Telefone</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each post}}
+                    {{#dataValues}}
+                <tr>
+                    <td>{{nome}}</td>
+                    <td>{{cidade}}</td>
+                    <td>
+                        <button class="btn btn-primary" ><a href="/editar/{{id}}"> Editar</a></button>
+                        <button class="btn btn-danger"><a href="/excluir/{{id}}"> Excluir</a></button>
+                    </td>
+                </tr>
+                 {{/dataValues}}
+                {{/each}}
+                <!-- Adicione mais linhas conforme necessário -->
+            </tbody>
+        </table>
+    </div>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
